@@ -1,0 +1,632 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #1a1a1a; /* Dark gray/black background */
+    color: #f5f5f5; /* White text */
+    line-height: 1.6;
+}
+
+
+/* Navigation Bar */
+nav {
+    background-color: #2a2a2a; /* Slightly lighter gray for nav */
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo Container Styles */
+.logo-container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#main-logo {
+    max-width: 180px; /* Adjust based on your logo dimensions */
+    height: auto;
+    /* For a white-platinum look on dark background */
+    filter: brightness(1.05) contrast(0.95);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e6e6e6; /* Titanium color */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    color: #e6e6e6; /* Titanium color */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffffff; /* Bright white on hover */
+}
+
+/* Main Container */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+section {
+    margin: 3rem 0;
+    padding: 2rem;
+    background-color: #2a2a2a; 
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#home {
+    background-color: transparent !important; /* กำหนดให้พื้นหลังโปร่งใส */
+    box-shadow: none; /* ลบเงาออกเพื่อให้แตกต่างจากส่วนอื่น */
+    padding: 2rem; /* คงระยะขอบเพื่อให้เข้ากับดีไซน์ */
+}
+
+.portfolio-title {
+    text-align: center; /* จัดข้อความตรงกลาง */
+    font-weight: bold; /* ทำให้ตัวอักษรหนา */
+}
+
+.font-size: 2em; /* ปรับขนาดตัวอักษรใหญ่ขึ้น */
+
+
+h2 {
+    margin-bottom: 0.5rem;
+    color: #ffffff; /* White headings */
+}
+
+.text-container {
+    display: flex;
+    justify-content: space-between; /* แยกข้อความให้อยู่คนละฝั่ง */
+    align-items: center; /* จัดให้อยู่แนวเดียวกัน */
+    gap: 2px; /* ระยะห่างระหว่างข้อความ */
+    width: 100%; /* ใช้พื้นที่เต็ม */
+}
+
+.subtitle {
+    flex: 1; /* ให้แต่ละข้อความขยายขนาดได้ */
+    font-size: 1em; /* ขนาดตัวอักษร */
+    max-width: 48%; /* จำกัดความกว้างไม่ให้เกิน 48% ของ container */
+}
+
+.thai {
+    text-align: Right; /* ชิดซ้าย */
+}
+
+.english {
+    text-align: Left; /* ชิดขวา */
+}
+
+
+/* Forms */
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #e6e6e6; /* Titanium color */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #3a3a3a; /* Dark input fields */
+    border: 1px solid #5a5a5a; /* Medium gray border */
+    border-radius: 4px;
+    color: #ffffff;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #8a8a8a; /* Lighter gray when focused */
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    background-color: #4a4a4a; /* Dark gray button */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #5a5a5a; /* Lighter gray on hover */
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.portfolio-item {
+    background-color: #3a3a3a;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-img {
+    width: 100%;
+    height: 180px;
+    background-color: #5a5a5a; /* Placeholder color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e6e6e6;
+}
+
+.portfolio-info {
+    padding: 1rem;
+}
+
+.portfolio-info h3 {
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+/* Footer */
+footer {
+    background-color: #2a2a2a;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #2a2a2a;
+    margin: 10% auto;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 500px;
+    animation: modalFade 0.3s;
+}
+
+@keyframes modalFade {
+    from {opacity: 0; transform: translateY(-30px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.close {
+    float: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hidden Sections */
+.hidden {
+    display: none;
+}
+
+/* Form Tabs */
+.form-tabs {
+    display: flex;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #5a5a5a;
+}
+
+.form-tab {
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #e6e6e6;
+    font-weight: 500;
+}
+
+.form-tab.active {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+.form-content {
+    display: none;
+}
+
+.form-content.active {
+    display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .logo {
+        margin-bottom: 1rem;
+    }
+    
+    .nav-links {
+        width: 100%;
+        justify-content: space-around;
+    }
+    
+    .nav-links li {
+        margin: 0;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+#pictures {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.pictures-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.picture-item {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    background-color: #ddd; /* สีพื้นหลังที่จะแสดงแทนรูป */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* สไตล์พื้นฐานของโลโก้ */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer; /* ทำให้ดูเหมือนคลิกได้ */
+    transition: all 0.3s ease-in-out;
+}
+
+/* เมื่อ hover โลโก้ */
+.logo:hover {
+    color: black;
+    -webkit-text-stroke: 1px white; /* เพิ่ม stroke สีขาว */
+    transform: scale(1.1); /* ขยายขนาด */
+}
+
+/* สไตล์เริ่มต้นของโลโก้ */
+.logo {
+    color: #E5E4E2;           /* white platinum */
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    /* กำหนด transition สำหรับเมื่อออกจาก hover (ช้าลง) */
+    transition: transform 0.5s ease-out, color 0.5s ease-out, -webkit-text-stroke 0.5s ease-out;
+}
+
+/* เมื่อ user นำเมาส์ไปวางบน section ที่กำหนด (ในที่นี้คือ nav) */
+nav:hover #logo {
+    color: #333;              /* black-gray */
+    -webkit-text-stroke: 1px #E5E4E2; /* stroke สี white platinum */
+    transform: scale(1.1);    /* ขยายขนาดข้อความ */
+    /* เปลี่ยน transition ให้การเข้าเร็วขึ้น (0.3s) */
+    transition: transform 0.3s ease-in, color 0.3s ease-in, -webkit-text-stroke 0.3s ease-in;
+}
+
+.pictures-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "big small1"
+        "big small2";
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+    max-width: 420px; /* ปรับตามต้องการ */
+    margin: auto;
+}
+
+.picture-item:nth-child(1) {
+    grid-area: big;
+    width: 600px;
+    height: 404px; /* 200px + 200px + 4px gap */
+}
+
+.picture-item:nth-child(2) {
+    grid-area: small1;
+    width: 400px;
+    height: 200px;
+}
+
+.picture-item:nth-child(3) {
+    grid-area: small2;
+    width: 400px;
+    height: 200px;
+}
+
+.picture-item:nth-child(4) {
+    grid-area: big;
+    width: 600px;
+    height: 404px;
+}
+
+.picture-item {
+    border-radius: 15px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pictures {
+    margin-top: 50px;
+    text-align: center;
+    position: relative;
+    padding: 50px 0; /* เพิ่ม padding ให้เห็นพื้นหลังชัดขึ้น */
+    background-image: url('folio 7.2.png'); /* ใส่ภาพพื้นหลัง */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#pictures {
+    position: relative;
+    text-align: center;
+    margin-top: 50px;
+    padding: 50px 0;
+}
+
+#pictures {
+    position: relative;
+    text-align: center;
+    margin-top: 50px;
+    padding: 50px 0;
+    overflow: hidden;
+}
+
+.background-blur {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    background-image: url('folio 7.2.png'); /* ใส่รูปที่ต้องการ */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Gaussian Blur Effect */
+    filter: blur(20px);
+    
+    /* เพิ่ม Opacity ให้กลมกลืน */
+    opacity: 0.6;
+    
+    /* ส่งพื้นหลังไปอยู่ด้านหลัง */
+    z-index: -1;
+}
+
+#pictures {
+    position: relative;
+    text-align: center;
+    margin-top: 50px;
+    padding: 50px 0;
+    overflow: hidden;
+}
+
+#pictures::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: calc(150% + 40px);
+    height: calc(150% + 40px);
+    background-image: url('folio 7.2.png'); /* เปลี่ยนเป็นรูปที่ต้องการ */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* ทำให้ภาพเบลอ */
+    filter: blur(20px);
+    
+    /* ขยายเฉพาะรูปภาพ */
+    transform: scale(1.5); /* ปรับค่านี้เพื่อขยายภาพ */
+    
+    /* ทำให้ภาพซ้อนกับ background */
+    opacity: 0.6;
+    
+    /* ส่งพื้นหลังไปด้านหลัง */
+    z-index: -1;
+}
+
+.pictures-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* ให้แต่ละอันกินพื้นที่เท่ากัน */
+    gap: 4px;
+    padding: 4px;
+}
+
+.picture-item {
+    background-color: lightgray;
+    height: 150px;
+}
+
+.picture-item {
+    overflow: hidden; /* ตัดส่วนที่เกิน */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.picture-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ขยายรูปภาพให้พอดีโดยไม่เสียสัดส่วน */
+}
+
+.picture-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ขยายภาพให้เต็มพื้นที่โดยไม่เสียสัดส่วน */
+}
+
+/* ปรับเฉพาะรูปที่สามให้เป็นแนวนอน */
+.picture-item:nth-child(3) img {
+    aspect-ratio: 16 / 9; /* ทำให้ภาพกว้างขึ้น */
+    width: 100%;
+    height: auto; /* ป้องกันการบีบภาพ */
+}
+
+.picture-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* ตัดส่วนที่เกิน */
+    background-color: lightgray;
+    width: 100%; /* ให้ขนาด div เท่ากับ grid ที่ตั้งไว้ */
+    height: 100%; /* ให้ขนาด div เท่ากับ grid ที่ตั้งไว้ */
+}
+
+.picture-item img {
+    max-width: 100%; /* ไม่ให้รูปใหญ่กว่าขอบ div */
+    max-height: 900%; /* ไม่ให้รูปใหญ่กว่าขอบ div */
+    object-fit: contain; /* จัดให้อยู่ตรงกลางโดยไม่ถูกตัด */
+}
+
+.picture-item img[alt="image3"] {
+    margin-top: 50px; /* ปรับค่าตามต้องการ */
+}
+
+h2 {
+    text-align: center; /* จัดให้อยู่ตรงกลาง */
+    margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่าง 5px */
+}
+
+.portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; /* ระยะห่างระหว่าง portfolio-item */
+}
+
+.contact-message {
+    margin-left: 90px; /* ขยับไปทางขวา */
+    color: #b0b0b0; /* สีเทาอ่อน */
+}
+
+.logo-experiment {
+    text-align: center;
+    background-color: transparent; /* ไม่มีสีพื้นหลัง */
+    padding: 50px 0;
+}
+
+
+.logo-experiment h1 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 50px; /* ระยะห่างจาก p */
+}
+
+.contact-text {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.logo-socials {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* ระยะห่างระหว่าง social box */
+}
+
+.social-box {
+    width: 50px;
+    height: 50px;
+    background-color: #555; /* สีเทาเข้ม */
+    border-radius: 5px;
+}
+
+.social-media-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* ระยะห่างระหว่างไอคอน */
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain; /* ปรับขนาดให้พอดี */
+}
+
+.social-media-box {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* เพิ่มระยะห่างระหว่างไอคอน */
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain; /* ปรับขนาดให้พอดี */
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain; /* ทำให้ภาพไม่ยืด */
+    display: block; /* ป้องกันการมีพื้นที่เกิน */
+}

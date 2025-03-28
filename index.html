@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRAPPHASE Portfolio</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo" id="logo">My Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#account" id="accountBtn">Account</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+
+        <!-- Main Content -->
+        <div class="container">
+        <!-- Home Section -->
+        <section id="home">
+            <h2>This's my portfolio GRAPPHASE</h2>
+            <div class="text-container">
+    <p class="subtitle thai">
+        ฉันเป็นนักออกแบบมืออาชีพที่เชี่ยวชาญด้านกราฟิกดีไซน์ การออกแบบ UX/UI และศิลปะ 3D 
+        ฉันหลงใหลในการสร้างสรรค์งานออกแบบที่สวยงามและใช้งานง่าย เพื่อยกระดับประสบการณ์ของผู้ใช้
+    </p>
+    <p class="subtitle english">
+        I am a professional designer specializing in graphic design, UX/UI design, and 3D art. 
+        I am passionate about creating visually compelling and user-friendly designs that enhance user experiences.
+    </p>
+</div>
+
+            </div>
+            <br><br> <!-- เพิ่มระยะห่าง 2 บรรทัด -->
+            <p class="contact-message">Feel free to explore and get in touch if you'd like to collaborate on a project.</p>
+
+        </section>
+        
+
+    
+        <!-- Pictures Section -->
+        <section id="pictures">
+            <div class="background-blur"></div> <!-- Background Layer -->
+            <h2>Example</h2>
+            <div class="pictures-grid">
+                <div class="pictures-grid">
+                    <div class="picture-item">
+                        <img src="Packaging mockup - PSD template, JPG, PNG images and design to download2.jpg" alt="image1">
+                    </div>
+                    <div class="picture-item">
+                        <img src="folio 4.1.png" alt="image2">
+                    </div>
+                    <div class="picture-item">
+                        <img src="folio 6.1.png"alt="image3">  
+                    </div>
+                </div>                
+            </div>
+        </section>
+        
+        
+
+        <!-- Portfolio Section -->
+        <section id="portfolio">
+            <h2>My Works</h2>
+            <div class="portfolio-grid" id="portfolioGrid">
+                <!-- Portfolio items will be loaded here from JS -->
+            </div>
+        </section>
+
+        <!-- User Dashboard (visible after login) -->
+        <section id="dashboard" class="hidden">
+            <h2>My Dashboard</h2>
+            <p>Welcome back, <span id="username">User</span>!</p>
+            <div class="form-group">
+                <button id="logoutBtn">Logout</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Account Modal (Combined Login/Register) -->
+    <div id="accountModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeAccount">&times;</span>
+            <div class="form-tabs">
+                <button class="form-tab active" id="loginTab">Login</button>
+                <button class="form-tab" id="registerTab">Register</button>
+            </div>
+            
+            <!-- Login Form -->
+            <div class="form-content active" id="loginForm">
+                <div class="form-container">
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <button id="submitLogin">Login</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Register Form -->
+            <div class="form-content" id="registerForm">
+                <div class="form-container">
+                    <div class="form-group">
+                        <label for="registerName">Full Name</label>
+                        <input type="text" id="registerName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerEmail">Email</label>
+                        <input type="email" id="registerEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword">Password</label>
+                        <input type="password" id="registerPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <button id="submitRegister">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="logo-experiment">
+    <h1 style="text-align: center; color: white;">Logo design & Brand identity</h1>
+    <p style="text-align: center; margin-top: 50px;">Contact me</p>
+    
+    <div class="social-media-box">
+        <a href="https://www.youtube.com/@GrapPhase" target="_blank">
+            <img src="Youtube logo.png" alt="YouTube" class="social-icon">
+        </a>
+        <a href="https://www.tiktok.com/@grapphase1?_t=ZS-8urKedBLhTu&_r=1" target="_blank">
+            <img src="Tiktok lgoo.webp" alt="TikTok" class="social-icon">
+        </a>
+        <a href="nope" target="_blank">
+            <img src="Facebook logo.png" alt="Facebook" class="social-icon">
+        </a>
+        <a href="nope" target="_blank">
+            <img src="IG logo.png" alt="Instagram" class="social-icon">
+        </a>
+        <a href="https://x.com/GrapPhase56368" target="_blank">
+            <img src="X logo.png" alt="Twitter/X" class="social-icon">
+        </a>
+    </div>
+</section>
+
+    
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 GRAPPHASE Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
