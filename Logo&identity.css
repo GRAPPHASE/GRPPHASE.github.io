@@ -142,3 +142,9 @@ body {
     height: auto; /* ปรับความสูงอัตโนมัติ */
     object-fit: contain; /* ป้องกันภาพตกขอบ div */
 }
+
+.text-box img {
+    width: 300%; /* ปรับขนาดตามต้องการ */
+    max-width: 500px; /* กำหนดขนาดสูงสุด */
+    height: auto; /* รักษาอัตราส่วน */
+}

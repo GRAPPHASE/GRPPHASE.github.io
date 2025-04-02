@@ -81,7 +81,7 @@ nav {
 section {
     margin: 3rem 0;
     padding: 2rem;
-    background-color: #2a2a2a; 
+    /* background-color: #2a2a2a;  */
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
@@ -283,34 +283,45 @@ footer {
     display: block;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 675px) {
     .nav-container {
-        flex-direction: column;
-        padding: 1rem;
+        flex-direction: row; /* จัดให้อยู่ในบรรทัดเดียวกัน */
+        justify-content: space-between; /* จัดวาง logo และ nav-links */
+        align-items: center;
+        padding: 10px;
     }
-    
+
     .logo {
-        margin-bottom: 1rem;
+        margin-bottom: 0;
     }
-    
+
     .nav-links {
-        width: 100%;
-        justify-content: space-around;
+        display: flex;
+        gap: 50px; /* กำหนดระยะห่างระหว่าง Home และ Portfolio เป็น 100px */
+        justify-content: center;
+        padding: 0;
     }
-    
+
     .nav-links li {
         margin: 0;
+        list-style: none; /* ลบจุด bullet ออกจาก nav */
     }
-    
+
+    .nav-links a {
+        text-decoration: none;
+        color: inherit;
+    }
+
     .portfolio-grid {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
 }
 
+
 #pictures {
     margin-top: 50px;
     text-align: center;
+    font-size: 0.5rem;
 }
 
 .pictures-grid {
@@ -569,7 +580,7 @@ h2 {
 .logo-experiment {
     text-align: center;
     background-color: transparent; /* ไม่มีสีพื้นหลัง */
-    padding: 50px 0;
+    padding: 5px 0;
 }
 
 
@@ -629,4 +640,91 @@ h2 {
     height: 50px;
     object-fit: contain; /* ทำให้ภาพไม่ยืด */
     display: block; /* ป้องกันการมีพื้นที่เกิน */
+}
+
+h2 {
+    font-size: 2em; /* ปรับขนาดฟอนต์ให้ใหญ่ขึ้น */
+}
+
+#home {
+    margin-top: 200px; /* ขยับ Section id=home ลงมา 100px */
+}
+
+@media (max-width: 1000px) {
+    .pictures-grid {
+        transform: scale(0.7); /* ลดขนาดลง 40% */
+        transform-origin: center; /* ย่อจากจุดกึ่งกลาง */
+    }
+    #pictures h2 {
+        margin-top: 30px; /* หรือค่าที่เหมาะสมกับดีไซน์ของคุณ */
+    }
+}
+
+@media (max-width: 675px) {
+    #portfolio {
+        transform: scale(0.8); /* ลดขนาดทั้งหมดลง 20% */
+    }
+
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 10px; /* ปรับช่องว่างระหว่างไอเทม */
+        /* margin: 20px; */
+    }
+
+    .portfolio-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%; /* ทำให้ทุก item เป็นจัตุรัส */
+        aspect-ratio: 1/1; /* กำหนดให้อัตราส่วนเป็น 1:1 */
+        overflow: hidden;
+    }
+
+    .portfolio-img {
+        width: 100%;
+        height: 70%; /* รูปภาพด้านบน */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #5a5a5a;
+    }
+
+    .portfolio-info {
+        width: 100%;
+        height: 30%; /* ข้อความด้านล่าง */
+        text-align: center;
+        padding: 5px;
+    }
+}
+
+/* เพิ่มขนาดฟอนต์ให้ใหญ่ขึ้นสำหรับ "A Vision in Design" */
+.a-vision-in-design {
+    font-size: 48px; /* ปรับขนาดตามที่ต้องการ */
+    font-weight: bold;
+    text-align: center;
+}
+    
+.background-image {
+    width: 660px;
+    height: 100px;
+    /* background-image: url('Pictures/Grap phase-01.png'); */
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+/* จัดให้ background ตรงกับ h2 */
+h2 {
+    position: relative;
+    z-index: 1; /* ให้ h2 อยู่ด้านหน้า */
+}
+
+.background-image {
+    top: calc(100px + 20px); /* ปรับค่าตามต้องการ */
 }
